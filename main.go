@@ -177,7 +177,7 @@ func sayHello(res http.ResponseWriter, req *http.Request) {
     res.Write([]byte(message))
 }
 
-// cors setup
+// cors setup (special thanks to Flavio@ https://flaviocopes.com/golang-enable-cors/ )
 func setupResponse(w *http.ResponseWriter, req *http.Request) {
     (*w).Header().Set("Access-Control-Allow-Origin", "*")
     (*w).Header().Set("Access-Control-Allow-Methods", "POST, GET")
